@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://unpkg.com/treeflex/dist/css/treeflex.css" rel="stylesheet">
+
+  <title>Tree Solution</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h1>Tree Solution</h1>
+        <table id="edge-table" class="table">
+          <thead>
+            <th class="col-sm-5">Edges</th>
+            <th class="col-sm-5"></th>
+            <th class="col-sm-2"></th>
+          </thead>
+          <tbody id="edge-table-body">
+            <td class="col-sm-5"><input class="edge-input form-control" readonly value="1"></td>
+            <td class="col-sm-5"><input id="first-child" class="edge-input form-control" oninput="updateTree()"></td>
+            <td><button id="first-entry-remove" class="btn btn-danger" onclick="clearInput('first-child')"
+                hidden="true">X</td>
+          </tbody>
+        </table>
+        <div id="error-message" class="alert alert-warning" role="alert" hidden="1 === 2"></div>
+        <button class="btn btn-success" onclick="addEdge()">Add Edge</button>
+      </div>
+      <div class="col-sm-2"></div>
+      <div class="mt-5 col-sm-6">
+        <div class="tf-tree" id="tree">
+          <ul>
+            <li id="root">
+              <span class="tf-nc">1</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
